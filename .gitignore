@@ -1,6 +1,7 @@
 # Secret
 config.json
-
+daily_images/
+.idea/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

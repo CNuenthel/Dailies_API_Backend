@@ -14,7 +14,13 @@ def clean_up_zip():
 
 app = Flask(__name__)
 
-@app.route('/<month>')
+
+@app.route('/')
+def home_page():
+    return "Hey there space cowboy."
+
+
+@app.route('/daily/<month>', methods=['GET'])
 def serve_images(month):
     dm = daily_manager.DailyManager(config['username'],
                                     config['password'])  # Create headless webdriver
@@ -40,11 +46,12 @@ def serve_images(month):
     # Send the zip archive as a response
     return send_file(zip_filename, mimetype='application/zip', as_attachment=True)
 
+
 @app.route('/clear')
 def clear():
     os.remove("images.zip")
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=7777)
 
