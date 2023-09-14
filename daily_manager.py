@@ -15,10 +15,11 @@ if not os.path.exists(image_path):
 
 # Define chromedriver options
 options = webdriver.ChromeOptions()
-# options.add_argument('--headless')
+options.add_argument('--headless')
 
 with open('config.json', 'r') as f:
     config = json.load(f)
+
 
 class DailyManager:
 

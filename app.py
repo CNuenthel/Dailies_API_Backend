@@ -50,6 +50,12 @@ def serve_images(month):
 @app.route('/clear')
 def clear():
     os.remove("images.zip")
+    return True
+
+
+@app.route('/uptime')
+def uptime():
+    return True
 
 
 if __name__ == '__main__':
