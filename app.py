@@ -55,7 +55,7 @@ def clear():
 
 @app.route('/uptime')
 def uptime():
-    return True
+    return "Server is up"
 
 
 if __name__ == '__main__':
