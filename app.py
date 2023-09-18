@@ -7,11 +7,6 @@ import json
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-
-def clean_up_zip():
-    os.remove('images.zip')
-
-
 app = Flask(__name__)
 
 
