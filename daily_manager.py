@@ -51,7 +51,7 @@ class DailyManager:
     def screenshot(self):
         """ Take a screenshot of the current page and save it to current directory in daily_images folder """
         self.browser.save_screenshot(f"daily_images/{self.image_count}.png")
-        print(f"Image saved as {self.image_count}.p")
+        print(f"Image saved as {self.image_count}.png")
         self.image_count += 1
 
     def click_next(self):

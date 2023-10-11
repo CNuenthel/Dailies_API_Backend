@@ -52,6 +52,11 @@ def clear():
 def uptime():
     return "Server is up"
 
+# To start ngrok tunnel use command:
+#   .\ngrok http 7777
+
+# To close previous ngrok tunnels use command:
+#   taskkill /f /im ngrok.exe
 
 if __name__ == '__main__':
     app.run(port=7777)
